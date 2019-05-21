@@ -17,7 +17,7 @@ with open ("users.json", "r") as HC_users:
         if user['email'] not in username_by_email:
             continue
         user["mention_name"]=username_by_email[user["email"]]
-        print('User: %24s"\t"Mention Name: %s' % (user['name'],user['mention_name']))
+#        print('User: %24s"\t"Mention Name: %s' % (user['name'],user['mention_name']))
 
 with open ("users_modified.json", "w") as f:
     f.write(json.dumps(hc_users, indent=4))
